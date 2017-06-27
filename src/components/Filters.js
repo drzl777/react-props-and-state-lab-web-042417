@@ -3,9 +3,6 @@ import React from 'react';
 class Filters extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      value: this.props.filters.type
-    }
   }
 
   setSelect(event) {
@@ -17,7 +14,7 @@ class Filters extends React.Component {
       <div className="ui form">
         <h3>Animal type</h3>
         <div className="field">
-          <select name="type" id="type" value={this.state.value} onChange={this.setSelect.bind(this)}>
+          <select name="type" id="type" value={this.props.filters.type} onChange={this.setSelect.bind(this)}>
             <option value="all">All</option>
             <option value="cat">Cats</option>
             <option value="dog">Dogs</option>
